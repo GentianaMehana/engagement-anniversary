@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Our Scrapbook 💛</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Shadows+Into+Light&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= LOADER ================= -->
+
+<div class="loader" id="loader">
+    <div class="loader-content">
+        <div class="loader-book"></div>
+        <p class="loader-text">Opening our scrapbook...</p>
+    </div>
+</div>
+
+
+<!-- ================= MUSIC OVERLAY ================= -->
+
+<div class="music-overlay" id="musicOverlay">
+
+    <div class="music-box">
+
+        <div class="tape"></div>
+
+        <p class="music-eyebrow">💛 A gift for you 💛</p>
+
+        <h1 class="music-title">
+            Welcome to our<br>
+            scrapbook
+        </h1>
+
+        <p class="music-sub">
+            Press play, my love...
+        </p>
+
+        <button class="music-start" onclick="startExperience()">
+            ▶ Play Our Song
+        </button>
+
+        <p class="music-sign">
+            — made by Genta 💕
+        </p>
+
+    </div>
+
+</div>
+
+
+<audio id="bgMusic" loop>
+    <source src="music/kenga.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================= BOOK ================= -->
+
+<div class="book">
+
+
+    <!-- ================= PAGE 1 ================= -->
+
+    <div class="page active" data-page="0">
+
+        <div class="page-inner">
+
+            <div class="cover">
+
+                <div class="cover-sticker s1">💛</div>
+                <div class="cover-sticker s2">✨</div>
+                <div class="cover-sticker s3">🌸</div>
+                <div class="cover-sticker s4">💕</div>
+
+                <p class="cover-small">
+                    Our Little
+                </p>
+
+                <h1 class="cover-title">
+                    Scrapbook
+                </h1>
+
+                <div class="cover-line"></div>
+
+                <p class="cover-names">
+                    Genta & Arian
+                </p>
+
+                <p class="cover-date">
+                    04 · 10 · 2025
+                </p>
+
+                <p class="cover-quote">
+                    "Bebi jem, un të dua apo vjen?" 💛
+                </p>
+
+                <button class="btn-next" onclick="nextPage()">
+                    Happy Anniversary My Love →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 2 ================= -->
+
+    <div class="page" data-page="1">
+
+        <div class="page-inner">
+
+            <div class="page-header">
+
+                <p class="page-num">
+                    Page 01
+                </p>
+
+                <h2 class="page-title">
+                    once upon a time...
+                </h2>
+
+                <p class="page-sub">
+                    when we were little
+                </p>
+
+            </div>
+
+
+            <div class="grid-2">
+
+                <div class="polaroid"
+                     onclick="openImage('fotot/femijeria1.jpg')">
+
+                    <div class="polaroid-tape"></div>
+
+                    <div class="polaroid-img">
+
+                        <img
+                            src="fotot/femijeria1.jpg"
+                            alt="Little Arian"
+                        >
+
+                    </div>
+
+                    <p class="polaroid-cap">
+                        little Arian 👶
+                    </p>
+
+                </div>
+
+
+                <div class="polaroid tilt-right"
+                     onclick="openImage('fotot/femijeria2.jpg')">
+
+                    <div class="polaroid-tape tape-pink"></div>
+
+                    <div class="polaroid-img">
+
+                        <img
+                            src="fotot/femijeria2.jpg"
+                            alt="Little Genta"
+                        >
+
+                    </div>
+
+                    <p class="polaroid-cap">
+                        little Genta 👶
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="note">
+
+                <div class="note-pin"></div>
+
+                <p>
+                    Two little kids, in different places —<br>
+                    fate had reserved a special meeting for them 💫
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 3 ================= -->
+
+    <div class="page" data-page="2">
+
+        <div class="page-inner">
+
+            <div class="page-header">
+
+                <p class="page-num">
+                    Page 02
+                </p>
+
+                <h2 class="page-title">
+                    our first photo
+                </h2>
+
+                <p class="page-sub">
+                    where it all began
+                </p>
+
+            </div>
+
+
+            <div class="first-photo-wrap">
+
+                <div
+                    class="first-photo-card"
+                    onclick="openImage('fotot/foto02.jpg')"
+                >
+
+                    <div class="washi washi-tl"></div>
+                    <div class="washi washi-br"></div>
+
+                    <div class="first-photo-img-wrap">
+
+                        <img
+                            src="fotot/foto02.jpg"
+                            alt="First Photo"
+                        >
+
+                    </div>
+
+                    <div class="first-photo-footer">
+
+                        <p class="first-photo-hand">
+                            "E vertete qe ma mire me blic haha"
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 4 ================= -->
+
+    <div class="page" data-page="3">
+
+        <div class="page-inner">
+
+            <div class="page-header">
+
+                <p class="page-num">
+                    Page 03
+                </p>
+
+                <h2 class="page-title">
+                    she said yes 💍
+                </h2>
+
+                <p class="page-sub">
+                    September 24 · 2025
+                </p>
+
+            </div>
+
+
+            <div class="grid-2">
+
+                <div
+                    class="polaroid tilt-left"
+                    onclick="openImage('fotot/foto01.jpg')"
+                >
+
+                    <div class="polaroid-tape tape-yellow"></div>
+
+                    <div class="polaroid-img">
+
+                        <img
+                            src="fotot/foto01.jpg"
+                            alt="The Proposal"
+                        >
+
+                    </div>
+
+                    <p class="polaroid-cap">
+                        the moment 💍
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="polaroid tilt-right"
+                    onclick="openImage('fotot/foto18.jpg')"
+                >
+
+                    <div class="polaroid-tape tape-blue"></div>
+
+                    <div class="polaroid-img">
+
+                        <img
+                            src="fotot/foto18.jpg"
+                            alt="You Said Yes"
+                        >
+
+                    </div>
+
+                    <p class="polaroid-cap">
+                        you said yes 💛
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quote-strip">
+
+                <p>
+                    "And in that moment, forever began."
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 5 ================= -->
+
+    <div class="page" data-page="4">
+
+        <div class="page-inner">
+
+            <div class="page-header">
+
+                <p class="page-num">
+                    Page 04
+                </p>
+
+                <h2 class="page-title">
+                    our engagement night
+                </h2>
+
+                <p class="page-sub">
+                    October 04 · 2025
+                </p>
+
+            </div>
+
+
+            <!-- 6 PHOTOS -->
+
+            <div class="triple-slideshow">
+
+                <div class="slide-box">
+                    <div class="slide-inner" id="slideBox1"></div>
+                </div>
+
+                <div class="slide-box">
+                    <div class="slide-inner" id="slideBox2"></div>
+                </div>
+
+                <div class="slide-box">
+                    <div class="slide-inner" id="slideBox3"></div>
+                </div>
+
+                <div class="slide-box">
+                    <div class="slide-inner" id="slideBox4"></div>
+                </div>
+
+                <div class="slide-box">
+                    <div class="slide-inner" id="slideBox5"></div>
+                </div>
+
+                <div class="slide-box">
+                    <div class="slide-inner" id="slideBox6"></div>
+                </div>
+
+            </div>
+
+
+            <div class="emoji-row">
+
+                <span>💐</span>
+                <span>💛</span>
+                <span>✨</span>
+                <span>💫</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 6 ================= -->
+
+    <div class="page" data-page="5">
+
+        <div class="page-inner">
+
+            <div class="page-header">
+
+                <p class="page-num">
+                    Page 05
+                </p>
+
+                <h2 class="page-title">
+                    a lifetime together
+                </h2>
+
+                <p class="page-sub">
+                    and counting...
+                </p>
+
+            </div>
+
+
+            <p class="counter-lead">
+                We've been together for
+            </p>
+
+
+            <div class="counter-grid">
+
+                <div class="counter-card">
+
+                    <span
+                        class="counter-num"
+                        id="days"
+                    >
+                        0
+                    </span>
+
+                    <span class="counter-label">
+                        days
+                    </span>
+
+                </div>
+
+
+                <div class="counter-card">
+
+                    <span
+                        class="counter-num"
+                        id="hours"
+                    >
+                        0
+                    </span>
+
+                    <span class="counter-label">
+                        hours
+                    </span>
+
+                </div>
+
+
+                <div class="counter-card">
+
+                    <span
+                        class="counter-num"
+                        id="minutes"
+                    >
+                        0
+                    </span>
+
+                    <span class="counter-label">
+                        minutes
+                    </span>
+
+                </div>
+
+
+                <div class="counter-card">
+
+                    <span
+                        class="counter-num"
+                        id="seconds"
+                    >
+                        0
+                    </span>
+
+                    <span class="counter-label">
+                        seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="counter-footnote">
+                💛 and forever to go 💛
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 7 ================= -->
+
+    <div class="page" data-page="6">
+
+        <div class="page-inner">
+
+            <div class="page-header">
+
+                <p class="page-num">
+                    Page 06
+                </p>
+
+                <h2 class="page-title">
+                    a letter for you
+                </h2>
+
+            </div>
+
+
+            <div
+                class="letter-card"
+                onclick="openLetter()"
+            >
+
+                <div class="seal">
+                    💛
+                </div>
+
+                <p class="letter-card-label">
+                    Click to open
+                </p>
+
+                <h3 class="letter-card-title">
+                    💌
+                </h3>
+
+                <p class="letter-card-hint">
+                    from Genta, with love
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PAGE 8 ================= -->
+
+    <div class="page" data-page="7">
+
+        <div class="page-inner">
+
+            <div class="closing">
+
+                <div class="emoji-row big">
+
+                    <span>💛</span>
+                    <span>✨</span>
+                    <span>💕</span>
+                    <span>🌸</span>
+                    <span>💫</span>
+
+                </div>
+
+
+                <h2 class="closing-title">
+
+                    happy anniversary,<br>
+                    my love 💛
+
+                </h2>
+
+
+                <div class="cover-line"></div>
+
+
+                <p class="closing-text">
+
+                    One year down, forever to go.<br>
+                    Thank you for being my favorite person.
+
+                </p>
+
+
+                <p class="closing-sign">
+
+                    with all my love,<br>
+                    Genta
+
+                </p>
+
+
+                <button
+                    class="btn-next btn-restart"
+                    onclick="goToPage(0)"
+                >
+                    ↻ Read Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<div class="nav">
+
+    <button
+        class="nav-btn"
+        id="prevBtn"
+        onclick="prevPage()"
+    >
+
+        <span>←</span>
+        <span class="nav-label">Prev</span>
+
+    </button>
+
+
+    <div
+        class="nav-dots"
+        id="navDots"
+    ></div>
+
+
+    <button
+        class="nav-btn"
+        id="nextBtn"
+        onclick="nextPage()"
+    >
+
+        <span class="nav-label">Next</span>
+        <span>→</span>
+
+    </button>
+
+</div>
+
+
+<!-- ================= PAGE INDICATOR ================= -->
+
+<div class="page-indicator">
+
+    <span id="currentNum">
+        1
+    </span>
+
+    <span class="divider">
+        /
+    </span>
+
+    <span id="totalNum">
+        8
+    </span>
+
+</div>
+
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeImage()"
+>
+
+    <span class="lightbox-close">
+        &times;
+    </span>
+
+    <img
+        id="lightboxImg"
+        src=""
+        alt=""
+    >
+
+</div>
+
+
+<!-- ================= LETTER ================= -->
+
+<div
+    class="letter-modal"
+    id="letterModal"
+    onclick="closeLetter(event)"
+>
+
+    <div
+        class="letter-wrap"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="letter-close"
+            onclick="closeLetter()"
+        >
+            &times;
+        </button>
+
+
+        <div class="letter-paper">
+
+            <div class="letter-header">
+
+                <span class="letter-stamp">
+                    💛
+                </span>
+
+                <div class="letter-postmark">
+
+                    <span>
+                        GENTA
+                    </span>
+
+                    <span>
+                        04·10·2025
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="letter-body">
+
+                <p class="letter-date">
+                    October 4, 2025
+                </p>
+
+                <p class="letter-hi">
+                    Arian, bebi jem,
+                </p>
+
+                <p>
+                    If you're reading this — you found my little surprise. 😊
+                </p>
+
+                <p>
+                    I want you to know something I don't say often enough:
+                </p>
+
+                <p class="letter-highlight">
+
+                    You are the most important person in my life.
+                    Every morning I wake up with a smile because I know
+                    you exist. Every night I sleep peacefully because I know
+                    tomorrow I'll see you again.
+
+                </p>
+
+                <p>
+
+                    Thank you for this wonderful year.
+                    Thank you for loving me, for putting up with me,
+                    for understanding me, and for always being there.
+
+                </p>
+
+                <p>
+
+                    I promise to love you for another thousand years —
+                    more than yesterday, less than tomorrow.
+
+                </p>
+
+                <p>
+
+                    You are my other half, my soul, my home.
+
+                </p>
+
+                <p class="letter-sign">
+
+                    Forever yours,<br>
+
+                    <span>
+                        Genta 💛
+                    </span>
+
+                </p>
+
+            </div>
+
+
+            <div class="letter-hearts">
+
+                <span>💕</span>
+                <span>💛</span>
+                <span>✨</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
